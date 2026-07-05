@@ -1,0 +1,1928 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+<!-- Meta Description untuk Google -->
+<b:if cond='data:view.isHomepage'>
+  <meta content='Nobodynaga adalah platform utama di Malaysia untuk panduan AI tools, review teknologi digital, dan strategi jana pendapatan online terpantas 2026.' name='description'/>
+</b:if>
+
+<!-- Open Graph untuk Facebook/WhatsApp Preview -->
+<meta expr:content='data:view.title' property='og:title'/>
+<meta content='website' property='og:type'/>
+<meta expr:content='data:blog.url' property='og:url'/>
+<meta expr:content='data:view.description.escaped' property='og:description'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <title><data:view.title.escaped/></title>
+    <b:include data='blog' name='all-head-content'/>
+    <b:skin><![CDATA[
+      /* --- LAYOUT CONTROLLED STYLES --- */
+      body { background:#f7f8fa; font-family: 'Inter', sans-serif; margin:0; padding:0; color:#333; }
+      .container { max-width:1100px; margin:0 auto; padding:0 15px; }
+      .nn-shell { display: grid; grid-template-columns: 1fr 320px; gap: 25px; margin-top: 20px; }
+      @media (max-width: 850px) { .nn-shell { grid-template-columns: 1fr; } }
+      
+      /* Widget Container Styling */
+      .section-box .widget { background:#fff; padding:20px; border-radius:12px; margin-bottom:25px; box-shadow:0 4px 10px rgba(0,0,0,0.05); }
+      .section-box h3, .section-box h2 { color:#2f4f8f; margin-top:0; }
+   /* Padamkan judul tambahan di dalam widget Search */
+#BlogSearch1 h2, 
+#BlogSearch1 .title,
+#BlogSearch1 label {
+    display: none !important;
+}
+
+/* Pastikan hanya satu judul utama sahaja yang tinggal */
+.sidebar-inner h3 {
+    display: block !important;
+    margin-bottom: 15px;
+}
+
+/* Kemaskan kotak carian supaya lebih moden */
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* --- POST FOOTER NAVIGATION --- */
+.post-footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+.nn-readmore {
+  background: #2f4f8f; /* Warna tema anda */
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nn-comment-link {
+  color: #666 !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Padamkan teks Featured/Label yang tidak diingini */
+.post-labels, .label-head { display: none !important; }
+/* --- SEMBUNYIKAN BUTANG LAMA --- */
+.jump-link, .post-comment-link, .comment-link, .byline, .post-labels {
+    display: none !important;
+}
+
+/* --- KEMASKAN BUTANG BARU NOBODYNAGA --- */
+.post-footer-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.nn-readmore {
+    background: #2f4f8f;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nn-comment-link {
+    color: #666 !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.blog-post {
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.blog-post:hover {
+  transform:translateY(-3px);
+}
+.featured-post, .PopularPosts .item {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom:20px;
+}
+
+.featured-post img {
+  border-radius:10px;
+} 
+.feed-links {
+    display: none !important;
+}
+/* Sembunyikan Logo Blogger & Attribution */
+#Attribution1, .footer-logo, .blogger-logo, .footer-attribution {
+    display: none !important;
+}
+
+/* Rekaan Footer Copyright Baru */
+.custom-copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+.comment-link, .comment-reply, #comment-editor {
+    position: relative !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+}
+/* --- FOOTER FULL WIDTH PADA MOBILE --- */
+@media screen and (max-width: 768px) {
+  /* Memaksa footer keluar dari container dan rapat ke tepi skrin */
+  .footer-system, .footer-info-container { 
+    margin-left: -20px !important; /* Laraskan mengikut padding container anda */
+    margin-right: -20px !important;
+    width: calc(100% + 40px) !important;
+    border-radius: 0 !important; /* Buang border radius supaya nampak lebih 'clean' pada mobile */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Pastikan kandungan di dalam footer tetap berada di tengah */
+.footer-about-box {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+]]></b:skin>
+  </head>
+
+  <body>
+    <div class='container'>
+      
+      <!-- [HEADER] -->
+      <b:section id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='nobodynaga-test.blogspot.com (Header)' type='Header' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='displayUrl'/>
+            <b:widget-setting name='displayHeight'>0</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>1031</b:widget-setting>
+            <b:widget-setting name='useImage'>false</b:widget-setting>
+            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+            <b:widget-setting name='displayWidth'>0</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main' var='this'>
+    <div class='header-widget'>
+      <b:include cond='data:imagePlacement in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='image'/>
+      <b:include cond='data:imagePlacement not in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='title'/>
+      <b:include cond='data:imagePlacement != &quot;REPLACE&quot;' name='description'/>
+    </div>
+    <b:include cond='data:imagePlacement == &quot;BEHIND&quot;' name='behindImageStyle'/>
+  </b:includable>
+          <b:includable id='behindImageStyle'>
+    <b:if cond='data:sourceUrl'>
+      <b:include cond='data:this.image' data='{                    image: data:this.image,                    selector: &quot;.header-widget&quot;                  }' name='responsiveImageStyle'/>
+      <style type='text/css'>
+        .header-widget {
+          background-position: <data:blog.locale.languageAlignment/>;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
+    </b:if>
+  </b:includable>
+          <b:includable id='description'>
+    <p>
+      <data:this.description/>
+    </p>
+  </b:includable>
+          <b:includable id='image'>
+    <a class='header-image-wrapper' expr:href='data:blog.homepageUrl'>
+      <b:include data='{                                                 image: data:image,                                                 altText: data:blog.title.escaped,                                                 originalWidth: data:width,                                                 originalHeight: data:height                                               }' name='responsiveImage'/>
+    </a>
+  </b:includable>
+          <b:includable id='title'>
+    <h1>
+      <b:tag cond='data:view.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+        <data:title/>
+      </b:tag>
+    </h1>
+  </b:includable>
+        </b:widget>
+      </b:section>
+
+      <b:if cond='data:view.isHomepage'>
+        <!-- [WELCOME HERO SECTION] - Control via HTML Widget -->
+        <b:section class='section-box' id='hero-welcome' maxwidgets='1' showaddelement='yes'>
+          <b:widget id='HTML10' locked='false' title='' type='HTML' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<div style="font-family:Arial,sans-serif; background:#f9fafb; color:#1f2937;">
+
+<!-- HERO SECTION -->
+<section style="background:linear-gradient(135deg,#111827,#1e293b); color:white; padding:60px 25px; border-radius:0 0 25px 25px;">
+
+<div style="max-width:1200px; margin:auto; display:grid; grid-template-columns:1fr; gap:30px; align-items:center;">
+
+<div>
+
+<h1 style="font-size:42px; line-height:1.3; margin-bottom:20px;">
+SELAMAT DATANG / WELCOME TO     
+                     NOBODYNAGA
+</h1></div></div></section></div>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML1' locked='false' title='Welcome' type='HTML' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<div style="font-family:Arial,sans-serif; background:#f9fafb; color:#1f2937; overflow-x:hidden;">
+
+<!-- HERO SECTION -->
+<section style="background:linear-gradient(135deg,#111827,#1e293b); color:white; padding:60px 25px; border-radius:0 0 25px 25px;">
+
+<div style="max-width:1200px; margin:auto; display:grid; grid-template-columns:1fr; gap:30px; align-items:center;">
+
+<div>
+
+<h1 style="font-size:clamp(30px,5vw,42px); line-height:1.3; margin-bottom:20px;">
+Nobodynaga — AI Tools, Blogging & Digital Productivity Hub
+</h1>
+
+<p style="font-size:clamp(15px,2vw,18px); color:#d1d5db; max-width:700px; line-height:1.8;">
+Di Nobodynaga kami berkongsi panduan AI tools, blogging, SEO, creator workflow dan digital safety untuk creator serta pengguna digital masa kini.
+</p>
+
+<div style="margin-top:30px; display:flex; gap:15px; flex-wrap:wrap;">
+
+<a href="/search/label/AI%20Tools" style="background:#f97316; color:white; padding:14px 24px; border-radius:10px; text-decoration:none; font-weight:bold;">
+Explore AI Tools
+</a>
+
+<a href="/search/label/Blogging" style="background:#374151; color:white; padding:14px 24px; border-radius:10px; text-decoration:none; font-weight:bold;">
+Browse Guides
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section></div>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
+
+        <!-- [FEATURED POST SECTION] - Control via HTML Widget -->
+        <b:section class='section-box' id='featured-post' maxwidgets='1' showaddelement='yes'>
+          <b:widget id='FeaturedPost1' locked='false' title='Featured AI &amp;amp; Creator Guides' type='FeaturedPost' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='showSnippet'>true</b:widget-setting>
+              <b:widget-setting name='showPostTitle'>true</b:widget-setting>
+              <b:widget-setting name='postId'>2355660752459045605</b:widget-setting>
+              <b:widget-setting name='showFirstImage'>true</b:widget-setting>
+              <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <b:include name='snippetedPosts'/>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
+
+        <!-- [CATEGORIES SECTION] - Control via HTML/Label Widget -->
+        <b:section class='section-box' id='category-block' showaddelement='yes'>
+          <b:widget id='HTML4' locked='false' title='' type='HTML' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<!-- FEATURED ARTICLES -->
+<section style="max-width:1200px; margin:50px auto; padding:0 20px;">
+
+<h2 style="color:#ea580c; border-bottom:2px solid #fed7aa; padding-bottom:10px; margin-bottom:30px;">
+🔥 Featured AI & Creator Guides
+</h2>
+
+<!-- MOBILE REPAIRED GRID -->
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px;">
+
+<!-- CARD 1 -->
+<div style="background:white; border-radius:18px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,0.08);">
+
+<a href="https://www.nobodynaga.com/2026/05/jasper-ai-2026-cara-creator-hasilkan.html"
+style="text-decoration:none; color:inherit; display:block;">
+
+<img 
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBmTJd4M90yNBWX70dQszVNC54fsoLChJhED9gmRyr9x9xWcdpPQROGdwyT0jviej1RnFkbY9Nkexm5wrH-Q7r77Zxp7x9WdVHPmMFscn816jaWOk2EdZOl3g3IdjP1_HM9jB93123SNi7y9n_bXGrh5ifV2u-P0EdV2rM5tmqRH5NSTHhDxBNh2lcRy8/s1536/Jasper%20AI.png"
+alt="Jasper AI Content Marketing Nobodynaga"
+style="width:100%; height:auto; max-height:220px; object-fit:cover; display:block;" />
+
+<div style="padding:20px;">
+
+<h3 style="margin-top:0; color:#111827; line-height:1.4; min-height:70px;">
+Jasper AI: Content Marketing Lebih Pantas Dengan AI
+</h3>
+
+<p style="color:#6b7280; line-height:1.7; min-height:80px;">
+Panduan creator menggunakan Jasper AI untuk blogging, SEO dan content workflow moden.
+</p>
+
+<span style="color:#f97316; font-weight:bold;">
+Read More →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+<!-- CARD 2 -->
+<div style="background:white; border-radius:18px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,0.08);">
+
+<a href="https://www.nobodynaga.com/2026/05/heygen-ai-video-avatar-marketing-2026.html"
+style="text-decoration:none; color:inherit; display:block;">
+
+<img 
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg46QRrIAGjQJlX5ObY9zF75gY4QhRyT-t9nfLMoAmNl89_uf0EhPv7IAd6vw5lx8sVQAZDz7K256gFz06v1rzHX9UJX2YlCM-Iq-dsUKu2zctGirQWZRWTxwNXpOp9z5ofpQdpZthB5Hxo7Lv7V0l_IsEresDENio4E9Vlo_6Fl6bI_mphW7xwDeOMkYs/s1536/HeyGen%20-%20AI.png"
+alt="HeyGen AI Video Avatar Marketing Nobodynaga"
+style="width:100%; height:auto; max-height:220px; object-fit:cover; display:block;" />
+
+<div style="padding:20px;">
+
+<h3 style="margin-top:0; color:#111827; line-height:1.4; min-height:70px;">
+HeyGen AI: AI Avatar Untuk Creator Video
+</h3>
+
+<p style="color:#6b7280; line-height:1.7; min-height:80px;">
+Cara menghasilkan video AI professional menggunakan avatar dan automation workflow.
+</p>
+
+<span style="color:#f97316; font-weight:bold;">
+Read More →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+<!-- CARD 3 -->
+<div style="background:white; border-radius:18px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,0.08);">
+
+<a href="https://www.nobodynaga.com/2026/05/magnific-ai-image-enhancer-2026.html"
+style="text-decoration:none; color:inherit; display:block;">
+
+<img 
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz8XjXkkeJfhsPRKeqRmrTB-iaRc8wRzrnRQFehv8C9X_xsHeZjg_PN87a-V3n1ts2afqgH44bTllSYmrPwk8NUQg3BZ2_3BxHvHWnbpEy7aDaY7R0R3BLEe4nAlZ6ZunZUNn-eQHaE3KyxxjS47ODuzg6WLrqNOKZsDYx7Wp8uWGHXjmjq_AhLR_BZJk/s1536/magnific%20AI.png"
+alt="Magnific AI Image Enhancer Nobodynaga"
+style="width:100%; height:auto; max-height:220px; object-fit:cover; display:block;" />
+
+<div style="padding:20px;">
+
+<h3 style="margin-top:0; color:#111827; line-height:1.4; min-height:70px;">
+Magnific AI: Upgrade Thumbnail & Visual Branding
+</h3>
+
+<p style="color:#6b7280; line-height:1.7; min-height:80px;">
+AI image enhancement untuk creator yang mahu visual lebih premium dan profesional.
+</p>
+
+<span style="color:#f97316; font-weight:bold;">
+Read More →
+</span>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</section>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML8' locked='false' title='' type='HTML' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<!-- CATEGORY CARDS -->
+<section style="max-width:1200px; margin:70px auto; padding:0 20px;">
+
+<h2 style="color:#ea580c; border-bottom:2px solid #fed7aa; padding-bottom:10px; margin-bottom:30px;">
+📂 Explore AI Hub
+</h2>
+
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Tools</h3>
+<p style="color:#6b7280;">Terokai AI tools terbaik berserta panduan , tutorial, perbandingan dan tip praktikal untuk meningkatkan produktiviti serta kemahiran AI anda.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Tools"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Education </h3>
+<p style="color:#6b7280;">AI untuk pelajar, guru, ibu bapa, pendidikan khas dan pembelajaran digital moden.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Education"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">Blogging & SEO</h3>
+<p style="color:#6b7280;">Pelajari cara blog yang berjaya, strategi SEO, content marketing, keyword research, Google Search serta penulisan artikel.</p>
+<a href="https://www.nobodynaga.com/search/label/Blogging"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Safety</h3>
+<p style="color:#6b7280;">Fahami risiko AI seperti scam, deepfake, privasi data, keselamatan siber dan penggunaan Al secara selamat serta bertanggungjawab.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Safety"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Content Creator</h3>
+<p style="color:#6b7280;">Hasilkan artikel blog, imej, video, audio, media sosial dan kandungan digital menggunakan AI untuk kreativiti dan produktiviti.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Content%20Creator"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Productivity</h3>
+<p style="color:#6b7280;">Tingkatkan produktiviti dengan AI untuk mengurus tugasan, penulisan, penyelidikan, e-mel, mesyuarat, analisis data dan automasi aliran kerja.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Productivity"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Business</h3>
+<p style="color:#6b7280;">AI membantu perniagaan melalui automasi, pemasaran digital, analisis data, perkhidmatan pelanggan dan penjanaan pendapatan.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Business"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+<div style="background:white; padding:25px; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+<h3 style="margin-top:0;">AI Infrastructure</h3>
+<p style="color:#6b7280;">Pelajari asas teknologi AI seperti Prompt Engineering, AI Agent, MCP, RAG, Embeddings, LLM, Fine-Tuning, AI Memory dan AI Inference.</p>
+<a href="https://www.nobodynaga.com/search/label/AI%20Infrastructure"
+style="color:#f97316; font-weight:bold; text-decoration:none;">Explore →</a>
+</div>
+
+</div></section>
+
+<!-- MOBILE RESPONSIVE FIX -->
+<style>
+
+@media screen and (max-width:768px){
+
+section{
+padding-left:15px !important;
+padding-right:15px !important;
+}
+
+h1{
+font-size:34px !important;
+line-height:1.25 !important;
+}
+
+h2{
+font-size:28px !important;
+}
+
+div[style*="repeat(auto-fit,minmax(280px,1fr))"]{
+grid-template-columns:1fr !important;
+}
+
+div[style*="repeat(auto-fit,minmax(220px,1fr))"]{
+grid-template-columns:1fr !important;
+}
+
+img{
+max-width:100% !important;
+height:auto !important;
+}
+
+a{
+word-break:break-word;
+}
+
+}
+
+</style>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML12' locked='false' title='Category' type='HTML' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<h3 style="margin-bottom:10px;">Explore Articles</h3><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px;margin:20px 0;">
+
+<a href="/search/label/AI%20Tools" 
+style="background:#2d4f8b;color:#fff;padding:18px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;">
+🤖<br />AI Tools
+</a>
+
+<a href="/search/label/Blogging" 
+style="background:#00a86b;color:#fff;padding:18px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;">
+📘<br />Blogging SEO
+</a>
+
+<a href="/search/label/AI%20Safety" 
+style="background:#ff6a00;color:#fff;padding:18px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;">
+💰<br />AI Safety
+</a>
+
+<a href="/search/label/Creator%20Workflow" 
+style="background:#6f42c1;color:#fff;padding:18px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;">
+⭐<br />Creator Workflow
+</a>
+<a href="/search/label/Digital%20Productivity" 
+style="background:#6f42c1;color:#fff;padding:18px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;">
+⭐<br />Digital Productivity
+</a>
+<a href="/search/label/Affiliate%20Ecosystem" 
+style="background:#6f42c1;color:#fff;padding:18px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;">
+⭐<br />Affiliate Ecosystem
+</a>
+
+</div>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList1' locked='false' title='Default Variables' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='link-3'>6</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'>commentsSystem</b:widget-setting>
+              <b:widget-setting name='link-1'>blogger</b:widget-setting>
+              <b:widget-setting name='text-0'>disqusShortname</b:widget-setting>
+              <b:widget-setting name='link-2'>true</b:widget-setting>
+              <b:widget-setting name='text-3'>postPerPage</b:widget-setting>
+              <b:widget-setting name='link-0'>soratemplates</b:widget-setting>
+              <b:widget-setting name='text-2'>fixedSidebar</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList2' locked='false' title='' type='LinkList' version='2' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='link-5'>URL: https://www.nobodynaga.com/p/contact.html</b:widget-setting>
+              <b:widget-setting name='link-3'>URL: /search/label/Blogging</b:widget-setting>
+              <b:widget-setting name='link-4'>URL: https://www.nobodynaga.com/p/about.html</b:widget-setting>
+              <b:widget-setting name='text-1'>AI Tools</b:widget-setting>
+              <b:widget-setting name='text-0'>Home</b:widget-setting>
+              <b:widget-setting name='text-3'>Blogging</b:widget-setting>
+              <b:widget-setting name='text-2'>Creator Workflow</b:widget-setting>
+              <b:widget-setting name='text-5'>Contact</b:widget-setting>
+              <b:widget-setting name='text-4'>About</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='link-1'>URL: /search/label/AI%20Tools</b:widget-setting>
+              <b:widget-setting name='link-2'>URL: /search/label/Creator%20Workflow</b:widget-setting>
+              <b:widget-setting name='link-0'>URL: https://www.nobodynaga.com</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+    <b:include name='widget-title'/>
+    <b:include name='content'/>
+  </b:includable>
+            <b:includable id='content'>
+    <div class='widget-content'>
+          
+          
+       
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList3' locked='false' title='Link List' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'><![CDATA[<i class="ri-pantone-line"></i>Custom Menu 02]]></b:widget-setting>
+              <b:widget-setting name='link-1'>/</b:widget-setting>
+              <b:widget-setting name='text-0'><![CDATA[<i class="ri-pantone-fill"></i>Custom Menu 01]]></b:widget-setting>
+              <b:widget-setting name='link-0'>/</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList4' locked='false' title='Link List' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'><![CDATA[<i class="ri-external-link-line"></i>Normal Link 02]]></b:widget-setting>
+              <b:widget-setting name='link-1'>/</b:widget-setting>
+              <b:widget-setting name='text-0'><![CDATA[<i class="ri-external-link-line"></i>Normal Link 01]]></b:widget-setting>
+              <b:widget-setting name='link-0'>/</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList5' locked='false' title='Link List' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'><![CDATA[<i class="ri-edit-box-line"></i>Terms]]></b:widget-setting>
+              <b:widget-setting name='link-1'>https://medium-ui-soratemplates.blogspot.com/p/about.html</b:widget-setting>
+              <b:widget-setting name='text-0'><![CDATA[<i class="ri-profile-line"></i>Disclaimer]]></b:widget-setting>
+              <b:widget-setting name='link-2'>https://medium-ui-soratemplates.blogspot.com/p/about.html</b:widget-setting>
+              <b:widget-setting name='link-0'>https://medium-ui-soratemplates.blogspot.com/p/about.html</b:widget-setting>
+              <b:widget-setting name='text-2'><![CDATA[<i class="ri-file-text-line"></i>Policy]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList6' locked='false' title='Social Widget' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='link-3'>#</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'>twitter</b:widget-setting>
+              <b:widget-setting name='link-1'>https://twitter.com/LiveBlogger1</b:widget-setting>
+              <b:widget-setting name='text-0'>facebook</b:widget-setting>
+              <b:widget-setting name='link-2'>https://www.instagram.com/livebloggerofficial/</b:widget-setting>
+              <b:widget-setting name='text-3'>pinterest</b:widget-setting>
+              <b:widget-setting name='link-0'>https://www.facebook.com/soratemplates/</b:widget-setting>
+              <b:widget-setting name='text-2'>instagram</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList7' locked='false' title='Link List' type='LinkList' visible='false'>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='ReportAbuse1' locked='false' title='' type='ReportAbuse' visible='false'>
+            <b:includable id='main'>
+  <b:include name='reportAbuse'/>
+</b:includable>
+          </b:widget>
+          <b:widget id='Profile1' locked='false' title='About Me' type='Profile' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='showaboutme'>false</b:widget-setting>
+              <b:widget-setting name='showlocation'>false</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='authorProfileImage'>
+  <img class='profile-img' expr:alt='data:messages.myPhoto' expr:height='data:authorPhoto.height' expr:src='data:authorPhoto.image' expr:width='data:authorPhoto.width'/>
+</b:includable>
+            <b:includable id='content'>
+  <b:if cond='data:team'>
+    <div class='widget-content team'>
+      <b:include name='teamProfile'/>
+    </div>
+  <b:else/>
+    <div class='widget-content individual'>
+      <b:include name='userProfile'/>
+    </div>
+  </b:if>
+</b:includable>
+            <b:includable id='defaultProfileImage'>
+  <div class='default-avatar'/>
+</b:includable>
+            <b:includable id='profileImage'>
+  <b:if cond='data:authorPhoto.image'>
+    <b:include name='authorProfileImage'/>
+  <b:else/>
+    <b:include name='defaultProfileImage'/>
+  </b:if>
+</b:includable>
+            <b:includable id='teamProfile'>
+  <ul>
+    <b:loop values='data:authors' var='author'>
+      <li>
+        <div class='team-member'>
+          <b:include data='author' name='teamProfileLink'/>
+        </div>
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+            <b:includable id='teamProfileLink'>
+  <a class='profile-link g-profile' expr:href='data:userUrl' rel='nofollow'>
+    <b:include name='profileImage'/>
+    <span class='profile-name'><data:display-name/></span>
+  </a>
+</b:includable>
+            <b:includable id='userLocation'>
+  <dd class='profile-data location'><data:location/></dd>
+</b:includable>
+            <b:includable id='userProfile'>
+  <b:include name='userProfileImage'/>
+  <b:include name='userProfileInfo'/>
+</b:includable>
+            <b:includable id='userProfileData'>
+  <dt class='profile-data'>
+    <a class='profile-link g-profile' expr:href='data:userUrl' rel='author nofollow'>
+      <data:displayname/>
+    </a>
+  </dt>
+</b:includable>
+            <b:includable id='userProfileImage'>
+  <a expr:href='data:userUrl' rel='nofollow'>
+    <b:include name='profileImage'/>
+  </a>
+</b:includable>
+            <b:includable id='userProfileInfo'>
+  <div class='profile-info'>
+    <dl class='profile-datablock'>
+      <b:class cond='data:showlocation and data:location != &quot;&quot;' name='has-location'/>
+
+      <b:include name='userProfileData'/>
+      <b:include cond='data:showlocation and data:location != &quot;&quot;' name='userLocation'/>
+      <b:include cond='data:aboutme != &quot;&quot;' name='userProfileText'/>
+    </dl>
+    <b:include name='viewProfileLink'/>
+  </div>
+</b:includable>
+            <b:includable id='userProfileText'>
+  <dd class='profile-textblock'>
+    <data:aboutme/>
+  </dd>
+</b:includable>
+            <b:includable id='viewProfileLink'>
+  <a class='profile-link' expr:href='data:userUrl' rel='author nofollow'>
+    <data:messages.viewMyCompleteProfile/>
+  </a>
+</b:includable>
+          </b:widget>
+          <b:widget id='ContactForm1' locked='false' title='Contact form' type='ContactForm' visible='false'>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+  <div class='contact-form-widget'>
+    <div class='form'>
+      <form name='contact-form'>
+        <p/>
+        <data:contactFormNameMsg/>
+        <br/>
+        <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' size='30' type='text' value=''/>
+        <p/>
+        <data:contactFormEmailMsg/> <span style='font-weight: bolder;'>*</span>
+        <br/>
+        <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' size='30' type='text' value=''/>
+        <p/>
+        <data:contactFormMessageMsg/> <span style='font-weight: bolder;'>*</span>
+        <br/>
+        <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' rows='5'/>
+        <p/>
+        <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
+        <p/>
+        <div style='text-align: center; max-width: 222px; width: 100%'>
+          <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
+          <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
+        </div>
+      </form>
+    </div>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='Label3' locked='false' title='Tags' type='Label' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+              <b:widget-setting name='display'>CLOUD</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'>Beauty,Business,Fashion,Learn,Music,Nature,People,Photography,Sports,Technology</b:widget-setting>
+              <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='cloud'>
+  <b:loop values='data:labels' var='label'>
+    <span class='label-size'>
+      <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
+      <a class='label-name' expr:href='data:label.url'>
+        <data:label.name/>
+        <b:if cond='data:this.showFreqNumbers'>
+          <span class='label-count'><data:label.count/></span>
+        </b:if>
+      </a>
+    </span>
+  </b:loop>
+</b:includable>
+            <b:includable id='content'>
+  <div class='widget-content'>
+    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
+    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
+    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
+  </div>
+</b:includable>
+            <b:includable id='list'>
+  <ul>
+    <b:loop values='data:labels' var='label'>
+      <li>
+        <a class='label-name' expr:href='data:label.url'>
+          <data:label.name/>
+          <b:if cond='data:this.showFreqNumbers'>
+            <span class='label-count'><data:label.count/></span>
+          </b:if>
+        </a>
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+          </b:widget>
+          <b:widget id='Label2' locked='false' title='Label' type='Label' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
+              <b:widget-setting name='display'>LIST</b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'/>
+              <b:widget-setting name='showType'>ALL</b:widget-setting>
+              <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='cloud'>
+  <b:loop values='data:labels' var='label'>
+    <span class='label-size'>
+      <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
+      <a class='label-name' expr:href='data:label.url'>
+        <data:label.name/>
+        <b:if cond='data:this.showFreqNumbers'>
+          <span class='label-count'><data:label.count/></span>
+        </b:if>
+      </a>
+    </span>
+  </b:loop>
+</b:includable>
+            <b:includable id='content'>
+  <div class='widget-content'>
+    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
+    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
+    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
+  </div>
+</b:includable>
+            <b:includable id='list'>
+  <ul>
+    <b:loop values='data:labels' var='label'>
+      <li>
+        <a class='label-name' expr:href='data:label.url'>
+          <data:label.name/>
+          <b:if cond='data:this.showFreqNumbers'>
+            <span class='label-count'><data:label.count/></span>
+          </b:if>
+        </a>
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList8' locked='false' title='Social Plugin' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='link-7'>#</b:widget-setting>
+              <b:widget-setting name='link-5'>https://www.youtube.com/liveblogger</b:widget-setting>
+              <b:widget-setting name='link-6'>#</b:widget-setting>
+              <b:widget-setting name='link-3'>#</b:widget-setting>
+              <b:widget-setting name='link-4'>https://www.instagram.com/livebloggerofficial/</b:widget-setting>
+              <b:widget-setting name='text-1'>twitter</b:widget-setting>
+              <b:widget-setting name='text-0'>facebook</b:widget-setting>
+              <b:widget-setting name='text-3'>pinterest</b:widget-setting>
+              <b:widget-setting name='text-2'>reddit</b:widget-setting>
+              <b:widget-setting name='text-5'>youtube</b:widget-setting>
+              <b:widget-setting name='text-4'>instagram</b:widget-setting>
+              <b:widget-setting name='text-7'>whatsapp</b:widget-setting>
+              <b:widget-setting name='text-6'>linkedin</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='link-1'>https://twitter.com/LiveBlogger1</b:widget-setting>
+              <b:widget-setting name='link-2'>#</b:widget-setting>
+              <b:widget-setting name='link-0'>https://www.facebook.com/soratemplates/</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='LinkList9' locked='false' title='Menu Footer Widget' type='LinkList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'><![CDATA[<i class="ri-file-user-line"></i>About]]></b:widget-setting>
+              <b:widget-setting name='link-1'>https://medium-ui-soratemplates.blogspot.com/p/about.html</b:widget-setting>
+              <b:widget-setting name='text-0'><![CDATA[<i class="ri-home-8-line"></i>Home]]></b:widget-setting>
+              <b:widget-setting name='link-2'>https://medium-ui-soratemplates.blogspot.com/p/contact-us.html</b:widget-setting>
+              <b:widget-setting name='link-0'>/</b:widget-setting>
+              <b:widget-setting name='text-2'><![CDATA[<i class="ri-phone-line"></i>Contact]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+ <div class='widget-content'>
+   <ul>
+     <b:loop values='data:links' var='link'>
+       <li><a expr:href='data:link.target'><data:link.name/></a></li>
+     </b:loop>
+   </ul>
+ </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='PageList1' locked='false' title='Pages' type='PageList' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"https://www.nobodynaga.com/search/label/Jana%20Income","position":1,"title":"Jana Income"},"link0":{"href":"https://www.nobodynaga.com/search/label/AI%20Tools","position":0,"title":"AI Tools"},"link2":{"href":"https://www.nobodynaga.com/search/label/Blogging","position":2,"title":"Blogging"}}]]></b:widget-setting>
+              <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+            <b:includable id='content'>
+  <div class='widget-content'>
+    <b:include name='pageList'/>
+  </div>
+</b:includable>
+            <b:includable id='overflowButton'>
+  <b:include name='verticalMoreIcon'/>
+</b:includable>
+            <b:includable id='overflowablePageList'>
+  <div class='overflowable-container'>
+    <div class='overflowable-contents'>
+      <div class='container'>
+        <b:with value='true' var='overflow'>
+        <b:with value='&quot;tabs&quot;' var='pageListClass'>
+          <b:include name='pageList'/>
+        </b:with>
+        </b:with>
+      </div>
+    </div>
+    <div class='overflow-button hidden'>
+      <b:include name='overflowButton'/>
+    </div>
+  </div>
+</b:includable>
+            <b:includable id='pageLink'>
+  <li>
+    <b:class cond='data:overflow' name='overflowable-item'/>
+    <b:class cond='data:link.isCurrentPage' name='selected'/>
+
+    <a expr:href='data:link.href'><data:link.title/></a>
+  </li>
+</b:includable>
+            <b:includable id='pageList'>
+  <ul>
+    <b:class cond='data:pageListClass' expr:name='data:pageListClass'/>
+    <b:loop values='data:links' var='link'>
+      <b:include name='pageLink'/>
+    </b:loop>
+  </ul>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML3' locked='false' title='Free AI Template' type='HTML' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<h3>Dapatkan Template AI Income (FREE)</h3>
+<p>Masukkan email untuk belajar cara buat duit guna AI</p>
+
+<form action="https://blogspot.us12.list-manage.com/subscribe/post?u=825e33a73d3d3e5e2d3d96a61&amp;id=299a04c353" method="post" target="_blank">
+
+<input type="email" name="EMAIL" placeholder="Masukkan email anda" required style="width:100%; padding:8px; margin-bottom:10px;" />
+
+<input type="submit" value="Dapatkan Sekarang" style="width:100%; padding:10px; background:#007bff; color:white; border:none;" />
+
+</form>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+          <b:widget id='HTML2' locked='false' title='Facebook' type='HTML' visible='false'>
+            <b:widget-settings>
+              <b:widget-setting name='content'><![CDATA[<center><div class="fb-page" data-href="https://www.facebook.com/soratemplates" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></center>]]></b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
+      </b:if>
+
+      <div class='nn-shell'>
+        <!-- [LATEST POSTS] -->
+        <main>
+          <b:section id='main' showaddelement='yes'>
+            <b:widget id='HTML7' locked='false' title='' type='HTML' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='content'><![CDATA[<div style="font-family:Arial,sans-serif;margin:40px 0 25px;">
+
+<h2 style="
+font-size:30px;
+font-weight:700;
+color:#ea580c;
+border-bottom:2px solid #fed7aa;
+padding-bottom:12px;
+margin:0 0 12px;
+line-height:1.3;
+">
+
+📰 Latest From Nobodynaga
+
+</h2>
+
+<p style="
+font-size:16px;
+color:#6b7280;
+line-height:1.8;
+margin:0;
+max-width:760px;
+">
+
+Artikel terbaru mengenai <strong>Artificial Intelligence (AI)</strong>,
+<strong>Blogging</strong>, <strong>SEO</strong>,
+<strong>Digital Productivity</strong> dan
+<strong>Creator Economy</strong>. Ikuti panduan, tutorial,
+ulasan AI tools serta strategi digital terkini yang diterbitkan oleh Nobodynaga.
+
+</p>
+
+</div>
+
+<style>
+@media (max-width:768px){
+
+h2{
+font-size:26px !important;
+}
+
+p{
+font-size:15px !important;
+line-height:1.7 !important;
+}
+
+}
+</style>]]></b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+            </b:widget>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+                <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='showAuthor'>false</b:widget-setting>
+                <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='timestampLabel'/>
+                <b:widget-setting name='reactionsLabel'/>
+                <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                <b:widget-setting name='showLabels'>true</b:widget-setting>
+                <b:widget-setting name='showLocation'>false</b:widget-setting>
+                <b:widget-setting name='postLabelsLabel'>Category:</b:widget-setting>
+                <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+                <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                <b:widget-setting name='showReactions'>false</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main' var='this'>
+  <div class='blog-posts hfeed container'>
+    <b:loop index='i' values='data:posts' var='post'>
+      <b:include data='post' name='postCommentsAndAd'/>
+    </b:loop>
+  </div>
+  <b:include cond='data:view.isMultipleItems' name='postPagination'/>
+  <b:include name='feedLinks'/>
+  <b:if cond='data:blog.isGoogleEverywhereLinkTooltipEnabled'>
+    <b:include name='tooltipCss'/>
+  </b:if>
+</b:includable>
+              <b:includable id='aboutPostAuthor'>
+  <div class='author-name'>
+   <a class='g-profile' href='https://www.nobodynaga.com/p/about.html' rel='author' title='About Nobodynaga'>
+      <span>
+        <data:post.author.name/>
+      </span>
+    </a>
+  </div>
+  <div>
+    <span class='author-desc'>
+      <data:post.author.aboutMe/>
+    </span>
+  </div>
+</b:includable>
+              <b:includable id='addComments'>
+  <a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+    <b:message name='messages.postAComment'/>
+  </a>
+</b:includable>
+              <b:includable id='commentAuthorAvatar'>
+  <div class='avatar-image-container'>
+    <img class='author-avatar' expr:src='data:comment.authorAvatarSrc' height='35' width='35'/>
+  </div>
+</b:includable>
+              <b:includable id='commentDeleteIcon' var='comment'>
+  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+    <b:if cond='data:showCmtPopup'>
+      <div class='goog-toggle-button'>
+        <div class='goog-inline-block comment-action-icon'/>
+      </div>
+    <b:else/>
+      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:messages.deleteComment'>
+        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
+      </a>
+    </b:if>
+  </span>
+</b:includable>
+              <b:includable id='commentForm' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
+    <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+      <p><data:this.messages.blogComment/></p>
+    </b:if>
+    <b:include data='post' name='commentFormIframeSrc'/>
+    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+              <b:includable id='commentFormIframeSrc' var='post'>
+  <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+</b:includable>
+              <b:includable id='commentItem' var='comment'>
+  <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
+    <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
+
+    <div class='comment-block'>
+      <div class='comment-author'>
+ <a href='https://www.nobodynaga.com/p/about-me.html' rel='author'>
+  <data:comment.author/>
+</a>
+      </div>
+      <div expr:class='&quot;comment-body&quot; + (data:comment.isDeleted ? &quot; deleted&quot; : &quot;&quot;)'>
+        <data:comment.body/>
+      </div>
+      <div class='comment-footer'>
+        <span class='comment-timestamp'>
+          <a expr:href='data:comment.url' title='comment permalink'>
+            <data:comment.timestamp/>
+          </a>
+          <b:include data='comment' name='commentDeleteIcon'/>
+        </span>
+      </div>
+    </div>
+  </div>
+</b:includable>
+              <b:includable id='commentList' var='comments'>
+  <div id='comments-block'>
+    <b:loop values='data:comments' var='comment'>
+      <b:include data='comment' name='commentItem'/>
+    </b:loop>
+  </div>
+</b:includable>
+              <b:includable id='commentPicker' var='post'>
+  <b:if cond='data:post.showThreadedComments'>
+    <b:include data='post' name='threadedComments'/>
+  <b:else/>
+    <b:include data='post' name='comments'/>
+  </b:if>
+</b:includable>
+              <b:includable id='comments' var='post'>
+  <section expr:class='&quot;comments&quot; + (data:post.embedCommentForm ? &quot; embed&quot; : &quot;&quot;)' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+    <a name='comments'/>
+    <b:if cond='data:post.allowComments'>
+
+      <b:include name='commentsTitle'/>
+
+      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+        <b:include cond='data:post.comments' data='post.comments' name='commentList'/>
+      </div>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <div class='paging-control-container'>
+          <b:if cond='data:post.hasOlderLinks'>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+              <data:messages.oldest/>
+            </a>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+              <data:messages.older/>
+            </a>
+          </b:if>
+
+          <span class='comment-range-text'>
+            <data:post.commentRangeText/>
+          </span>
+
+          <b:if cond='data:post.hasNewerLinks'>
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+              <data:messages.newer/>
+            </a>
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+              <data:messages.newest/>
+            </a>
+          </b:if>
+        </div>
+      </b:if>
+
+      <div class='footer'>
+        <b:if cond='data:post.embedCommentForm'>
+          <b:if cond='data:post.allowNewComments'>
+            <b:include data='post' name='commentForm'/>
+          <b:else/>
+            <data:post.noNewCommentsText/>
+          </b:if>
+        <b:else/>
+          <b:if cond='data:post.allowComments'>
+            <b:include data='post' name='addComments'/>
+          </b:if>
+        </b:if>
+      </div>
+    </b:if>
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+  </section>
+</b:includable>
+              <b:includable id='commentsTitle'>
+  <h3 class='title'><data:messages.comments/></h3>
+</b:includable>
+              <b:includable id='feedLinks'>
+  <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
+    <b:if cond='data:feedLinks'>
+      <div class='blog-feeds'>
+        <b:include data='feedLinks' name='feedLinksBody'/>
+      </div>
+    </b:if>
+  <b:else/> <!--Post feed links -->
+    <div class='post-feeds'>
+      <b:loop values='data:posts' var='post'>
+        <b:if cond='data:post.allowComments and data:post.feedLinks'>
+          <b:include data='post.feedLinks' name='feedLinksBody'/>
+        </b:if>
+      </b:loop>
+    </div>
+  </b:if>
+</b:includable>
+              <b:includable id='feedLinksBody' var='links'>
+  <div class='feed-links'>
+  <data:messages.subscribeTo/>
+  <b:loop values='data:links' var='f'>
+     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+  </b:loop>
+  </div>
+</b:includable>
+              <b:includable id='homePageLink'>
+  <a class='home-link' expr:href='data:blog.homepageUrl'>
+    <data:messages.home/>
+  </a>
+</b:includable>
+              <b:includable id='iframeComments' var='post'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+              <b:includable id='inlineAd' var='post'>
+  <b:if cond='!data:view.isPreview'>
+    <b:if cond='data:this.adCode or data:this.adClientId or data:blog.adsenseClientId'>
+      <!-- Ad -->
+      <div class='inline-ad'>
+        <b:if cond='data:this.adCode != &quot;&quot;'>
+          <data:this.adCode/>
+        <b:else/>
+          <b:include cond='data:this.adClientId or data:blog.adsenseClientId' name='defaultAdUnit'/>
+        </b:if>
+      </div>
+    </b:if>
+  <b:else/>
+    <div class='inline-ad'>
+      <div class='inline-ad-placeholder'>
+        <span><b:message name='messages.adsGoHere'/></span>
+      </div>
+    </div>
+  </b:if>
+</b:includable>
+              <b:includable id='nextPageLink'>
+  <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
+    <data:messages.olderPosts/>
+  </a>
+</b:includable>
+              <b:includable id='post' var='post'>
+  <div class='post'>
+    <b:include data='post' name='postMeta'/>
+    <b:include data='post' name='postTitle'/>
+    <b:include name='headerByline'/>
+    <b:if cond='data:view.isSingleItem'>
+      <b:include data='post' name='postBody'/>
+    <b:else/>
+      <b:include data='post' name='postBodySnippet'/>
+      <b:include data='post' name='postJumpLink'/>
+    </b:if>
+    <b:include data='post' name='postFooter'/>
+  </div>
+</b:includable>
+              <b:includable id='postBody' var='post'>
+  <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
+  <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
+    <data:post.body/>
+  </div>
+</b:includable>
+              <b:includable id='postBodySnippet' var='post'>
+  <b:include data='post' name='postBody'/>
+</b:includable>
+              <b:includable id='postCommentsAndAd' var='post'>
+  <article class='post-outer-container'>
+    <!-- Post title and body -->
+    <div class='post-outer'>
+      <b:include data='post' name='post'/>
+    </div>
+
+    <!-- Comments -->
+    <b:include cond='data:view.isSingleItem' data='post' name='commentPicker'/>
+
+    <!-- Show ad inside post container, after comments, if single item. -->
+    <b:include cond='data:view.isSingleItem and data:post.includeAd' data='post' name='inlineAd'/>
+  </article>
+
+  <!-- Show ad outside post container (between posts) for feed pages. -->
+  <b:include cond='data:view.isMultipleItems and data:post.includeAd' data='post' name='inlineAd'/>
+</b:includable>
+              <b:includable id='postCommentsLink'>
+  <b:if cond='data:view.isMultipleItems'>
+    <span class='byline post-comment-link container'>
+      <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
+    </span>
+  </b:if>
+</b:includable>
+              <b:includable id='postFooter' var='post'>
+  <div class='post-footer'>
+ <div class='post-footer-nav'>
+  <!-- KIRI: Read More -->
+  <a class='nn-readmore' expr:href='data:post.url'>Read more &#8594;</a>
+  
+  <!-- KANAN: Post a Comment -->
+ <b:if cond='data:post.allowComments'>
+  <!-- Pautan terus ke kotak komen di bawah post -->
+  <a class='nn-comment-link' expr:href='data:post.url + &quot;#comment-form&quot;'>
+    <b:if cond='data:post.numComments == 0'>Post a Comment<b:else/><data:post.numComments/> Comments</b:if>
+  </a>
+</b:if>
+
+</div>
+ 
+  </div>
+</b:includable>
+              <b:includable id='postFooterAuthorProfile' var='post'>
+  <b:if cond='data:post.author.aboutMe and data:view.isPost'>
+    <div class='author-profile'>
+      <b:if cond='data:post.author.authorPhoto.url'>
+        <img class='author-image' expr:src='data:post.author.authorPhoto.url' width='50px'/>
+        <div class='author-about'>
+          <b:include data='post' name='aboutPostAuthor'/>
+        </div>
+      <b:else/>
+        <b:include data='post' name='aboutPostAuthor'/>
+      </b:if>
+    </div>
+  </b:if>
+</b:includable>
+              <b:includable id='postHeader' var='post'>
+ 
+</b:includable>
+              <b:includable id='postMeta' var='post'>
+  <b:include data='post' name='postMetadataJSON'/>
+</b:includable>
+              <b:includable id='postPagination'>
+  <div class='blog-pager container' id='blog-pager'>
+    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
+    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
+    <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
+  </div>
+</b:includable>
+              <b:includable id='postTitle' var='post'>
+  <a expr:name='data:post.id'/>
+  <b:if cond='data:post.title != &quot;&quot;'>
+    <h3 class='post-title entry-title'>
+      <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
+        <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+      <b:else/>
+        <data:post.title/>
+      </b:if>
+    </h3>
+  </b:if>
+</b:includable>
+              <b:includable id='previousPageLink'>
+  <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
+    <data:messages.newerPosts/>
+  </a>
+</b:includable>
+              <b:includable id='threadedCommentForm' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
+    <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+      <p><data:this.messages.blogComment/></p>
+    </b:if>
+    <b:include data='post' name='commentFormIframeSrc'/>
+    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+              <b:includable id='threadedCommentJs' var='post'>
+  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+  <b:template-script inline='true' name='threaded_comments'/>
+  <script type='text/javascript'>
+    blogger.widgets.blog.initThreadedComments(
+        <data:post.commentJso/>,
+        <data:post.commentMsgs/>,
+        <data:post.commentConfig/>);
+  </script>
+</b:includable>
+              <b:includable id='threadedComments' var='post'>
+  <section class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+    <a name='comments'/>
+
+    <b:include name='commentsTitle'/>
+
+    <div class='comments-content'>
+      <b:if cond='data:post.embedCommentForm'>
+        <b:include data='post' name='threadedCommentJs'/>
+      </b:if>
+      <div id='comment-holder'>
+         <data:post.commentHtml/>
+      </div>
+    </div>
+
+    <p class='comment-footer'>
+      <b:if cond='data:post.allowNewComments'>
+        <b:include data='post' name='threadedCommentForm'/>
+      <b:else/>
+        <data:post.noNewCommentsText/>
+      </b:if>
+      <b:if cond='data:post.showManageComments'>
+        <b:include data='post' name='manageComments'/>
+      </b:if>
+    </p>
+
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+  </section>
+</b:includable>
+              <b:includable id='tooltipCss'>
+  <!-- LINT.IfChange -->
+  <style>
+    .post-body a.b-tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip {
+      display: block !important;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-20%, 1px);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip iframe {
+      width: 200px;
+      height: 198px;
+      max-width: none;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (hover: hover) {
+      .post-body a.b-tooltip-container:hover .b-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  </style>
+  <!-- LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
+</b:includable>
+            </b:widget>
+          </b:section>
+        </main>
+
+        <!-- [SIDEBAR SETUP] -->
+        <aside class='section-box'>
+          <b:section id='sidebar' showaddelement='yes'>
+            <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch' visible='true'>
+              <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+              <b:includable id='content'>
+  <div class='widget-content' role='search'>
+    <b:include name='searchForm'/>
+  </div>
+</b:includable>
+              <b:includable id='searchForm'>
+  <form expr:action='data:blog.searchUrl'>
+    <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+    <b:include name='urlParamsAsFormInput'/>
+    <div class='search-input'>
+      <input autocomplete='off' expr:aria-label='data:messages.searchThisBlog' expr:placeholder='data:messages.searchThisBlog' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q'/>
+    </div>
+    <b:include name='searchSubmit'/>
+  </form>
+</b:includable>
+              <b:includable id='searchSubmit'>
+  <input class='search-action' expr:value='data:messages.search.escaped' type='submit'/>
+</b:includable>
+            </b:widget>
+            <b:widget id='HTML5' locked='false' title='🔥 Recommended Articles' type='HTML' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='content'><![CDATA[<div style="font-family:Arial,sans-serif;">
+
+<ul style="padding-left:18px;line-height:1.8;">
+
+<li>
+<a href="https://www.nobodynaga.com/2026/06/ai-homework-assistant-untuk-pelajar-2026.html">
+AI Homework Assistant Untuk Pelajar 2026
+</a>
+</li>
+
+<li>
+<a href="https://www.nobodynaga.com/2026/06/ai-study-planner-untuk-pelajar-2026.html">
+AI Study Planner Untuk Pelajar 2026
+</a>
+</li>
+
+<li>
+<a href="https://www.nobodynaga.com/2026/06/ai-workflow-untuk-guru-2026.html">
+AI Workflow Untuk Guru 2026
+</a>
+</li>
+
+<li>
+<a href="https://www.nobodynaga.com/2026/05/gemini-vs-chatgpt-vs-claude-2026.html">
+Gemini vs ChatGPT vs Claude 2026
+</a>
+</li>
+
+<li>
+<a href="https://www.nobodynaga.com/2026/06/50-ai-tools-terbaik-2026-framework.html">
+50 AI Tools Terbaik 2026
+</a>
+</li>
+
+</ul>
+
+</div>]]></b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+            </b:widget>
+            <b:widget id='HTML6' locked='false' title='📩 Join Our Newsletter' type='HTML' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='content'><![CDATA[<div style="background:#fff7ed;padding:15px;border-radius:12px;border-left:4px solid #ea580c;box-shadow:0 2px 8px rgba(0,0,0,.08);font-family:Arial,sans-serif;">
+
+<h4 style="margin:0 0 10px 0;color:#ea580c;">
+🎁 Bonus Subscriber
+</h4>
+
+<p style="margin:0 0 15px 0;line-height:1.8;color:#333;">
+✓ Prompt AI Percuma<br />
+✓ Artikel Eksklusif<br />
+✓ Digital Resources
+</p>
+
+<a href="https://nobodynaga.beehiiv.com"
+target="_blank"
+style="
+display:block;
+text-align:center;
+background:#ea580c;
+color:#fff;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;">
+
+📬 Dapatkan Akses Percuma
+
+</a>
+
+<p style="font-size:12px;color:#777;text-align:center;margin-top:10px;margin-bottom:0;">
+Percuma • Tiada Spam • Boleh Unsubscribe Bila-Bila Masa
+</p>
+
+</div>]]></b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+            </b:widget>
+            <b:widget id='HTML13' locked='false' title='Start Here' type='HTML' visible='false'>
+              <b:widget-settings>
+                <b:widget-setting name='content'><![CDATA[<div style="background:#fff;padding:15px;border-radius:10px;">
+<h3>🚀 Start Here</h3>
+
+<ul>
+<li><a href="/search/label/AI%20Tools">AI Software</a></li>
+<li><a href="/search/label/Blogging%20SEO">Blogging / SEO</a></li>
+<li><a href="/search/label/AI%20Safety"> Scam & Security</a></li>
+<li><a href="/search/label/Creator%20Workflow">Automation</a></li>
+<li><a href="/search/label/Digital%20Productivity">Apps /Productivity</a></li>
+<li><a href="/search/label/Affiliate%20Ecosystem">Affiliate</a></li>
+</ul>
+</div>]]></b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+            </b:widget>
+            <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
+              <b:widget-settings>
+                <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
+                <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+                <b:widget-setting name='showSnippets'>true</b:widget-setting>
+                <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <b:include name='snippetedPosts'/>
+  </div>
+</b:includable>
+            </b:widget>
+            <b:widget id='Label1' locked='false' title='Categories' type='Label' visible='false'>
+              <b:widget-settings>
+                <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+                <b:widget-setting name='display'>LIST</b:widget-setting>
+                <b:widget-setting name='selectedLabelsList'/>
+                <b:widget-setting name='showType'>ALL</b:widget-setting>
+                <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+              <b:includable id='cloud'>
+  <b:loop values='data:labels' var='label'>
+    <span class='label-size'>
+      <b:class expr:name='&quot;label-size-&quot; + data:label.cssSize'/>
+      <a class='label-name' expr:href='data:label.url'>
+        <data:label.name/>
+        <b:if cond='data:this.showFreqNumbers'>
+          <span class='label-count'><data:label.count/></span>
+        </b:if>
+      </a>
+    </span>
+  </b:loop>
+</b:includable>
+              <b:includable id='content'>
+  <div class='widget-content'>
+    <b:class expr:name='data:this.display + &quot;-label-widget-content&quot;'/>
+    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
+    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
+  </div>
+</b:includable>
+              <b:includable id='list'>
+  <ul>
+    <b:loop values='data:labels' var='label'>
+      <li>
+        <a class='label-name' expr:href='data:label.url'>
+          <data:label.name/>
+          <b:if cond='data:this.showFreqNumbers'>
+            <span class='label-count'><data:label.count/></span>
+          </b:if>
+        </a>
+      </li>
+    </b:loop>
+  </ul>
+</b:includable>
+            </b:widget>
+          </b:section>
+        </aside>
+      </div>
+
+      <!-- [FOOTER SECTION] -->
+      <b:section id='footer' showaddelement='yes'>
+        <b:widget id='HTML14' locked='false' title='' type='HTML' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='content'><![CDATA[<div style="background:#0f1b2e;color:#fff;padding:25px;border-radius:10px;margin-top:30px;">
+
+<h3>NOBODYNAGA</h3>
+
+<p>
+AI tools, creator workflow & digital productivity untuk creator digital masa kini.
+</p>
+
+<p>
+<a href="/p/about-me.html" style="color:#fff;">About</a> |
+<a href="/p/contact-us.html" style="color:#fff;">Contact</a> |
+<a href="/p/privacy-policy.html" style="color:#fff;">Privacy</a> |
+<a href="/p/disclaimer.html" style="color:#fff;">Disclaimer</a>
+</p>
+
+<hr style="border:0;border-top:1px solid #444;margin:20px 0;" />
+
+<a href="https://www.facebook.com/nobodynagaofficial" target="_blank" style="color:#fff;text-decoration:none;">
+Facebook
+</a>
+|
+<a href="https://www.threads.com/@nobodynaga" target="_blank" style="color:#fff;text-decoration:none;">
+Threads
+</a>
+|
+<a href="https://www.nobodynaga.com/feeds/posts/default?alt=rss" target="_blank" style="color:#fff;text-decoration:none;">
+RSS Feed
+</a>
+
+
+
+
+
+<p style="text-align:center;border-top:1px solid #444;padding-top:15px;margin-top:15px;font-size:12px;">
+© 2026 <b>Nobodynaga</b>. All Rights Reserved.
+</p>
+
+</div>]]></b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+        </b:widget>
+      </b:section>
+
+    </div>
+
+    <!-- Script for internal links inside posts -->
+    <b:if cond='data:view.isPost'>
+      <script type='text/javascript'>
+        // Logic for auto-inserting &quot;Baca Juga&quot; can be added here or via Layout HTML
+      </script>
+  <!-- Redirect Blogger profile links to About page -->
+    <script type='text/javascript'>
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+      document.querySelectorAll(&#39;a[href*=&quot;blogger.com/profile&quot;]&#39;).forEach(function(link) {
+        link.href = &#39;https://www.nobodynaga.com/p/about-me.html&#39;;
+      });
+    });
+    </script>
+    </b:if>
+  </body>
+</html>
